@@ -19,7 +19,7 @@ function mult(a,b) {
     var output = a * b;
     return [output]
 }
-
+// 1st and Pike 
 var shopOne = {
     name: '1st and Pike',
     min: 23,
@@ -31,14 +31,16 @@ var shopOne = {
         var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
         var liEl = document.createElement('li');
         console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies.`
+        liEl.textContent = `${times[i]}: ${totCooky} cookies`
         console.log('assigned value to liEl', liEl);
         pike.appendChild(liEl);
         }
     }
 }
+// 1st and pike function call
 shopOne.render();
 
+// SeaTac Airport
 var shopTwo = {
     name: 'SeaTac Airport',
     min: 3,
@@ -50,64 +52,74 @@ var shopTwo = {
         var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
         var liEl = document.createElement('li');
         console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies.`
+        liEl.textContent = `${times[i]}: ${totCooky} cookies`
         console.log('assigned value to liEl', liEl);
         seaTac.appendChild(liEl);
         }
     }
 }
+// SeaTac Airport function call
 shopTwo.render();
 
+// Seattle Center 
 var shopThree = {
     name: 'Seattle Center',
     min: 11,
     max: 38,
-    cookies: 3.7,
+    avgCookies: 3.7,
     render: function() {
         for (var i = 0; i < times.length; i++) {
         var randCust = getRandomIntInclusive(this.min, this.max);  
         var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
         var liEl = document.createElement('li');
         console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies.`
+        liEl.textContent = `${times[i]}: ${totCooky} cookies`
         console.log('assigned value to liEl', liEl);
-        seaTac.appendChild(liEl);
+        seaCenter.appendChild(liEl);
         }
     }
 }
+//Seattle Center function call
+shopThree.render();
 
+// Capitol Hill
 var shopFour = {
     name: 'Capitol Hill',
     min: 20,
     max: 38,
-    cookies: 2.3,
+    avgCookies: 2.3,
     render: function() {
         for (var i = 0; i < times.length; i++) {
         var randCust = getRandomIntInclusive(this.min, this.max);  
         var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
         var liEl = document.createElement('li');
         console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies.`
+        liEl.textContent = `${times[i]}: ${totCooky} cookies`
         console.log('assigned value to liEl', liEl);
-        seaTac.appendChild(liEl);
+        capitol.appendChild(liEl);
         }
     }
 }
+// Capitol Hill function call
+shopFour.render();
 
+// Alki
 var shopFive = {
     name: 'Alki',
     min: 2,
     max: 16,
-    cookies: 4.6,
+    avgCookies: 4.6,
     render: function() {
         for (var i = 0; i < times.length; i++) {
         var randCust = getRandomIntInclusive(this.min, this.max);  
         var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
         var liEl = document.createElement('li');
         console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies.`
+        liEl.textContent = `${times[i]}: ${totCooky} cookies`
         console.log('assigned value to liEl', liEl);
-        seaTac.appendChild(liEl);
+        alki.appendChild(liEl);
         }
     }
 }
+// Alki function call
+shopFive.render();
