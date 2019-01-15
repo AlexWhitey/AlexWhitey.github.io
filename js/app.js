@@ -110,20 +110,23 @@ var shopFive = {
     max: 16,
     avgCookies: 4.6,
     render: function() {
-        var cookyTot = 0;
+        var cookyTotal = 0;
         for (var i = 0; i < times.length; i++) {
-        var randCust = getRandomIntInclusive(this.min, this.max);  
-        var totCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
-        var cookyTot = cookyTot + totCooky[i];
-        console.log('total cookies', totCooky);
-        var liEl = document.createElement('li');
-        console.log('just created liEl', liEl);
-        liEl.textContent = `${times[i]}: ${totCooky} cookies`
-        console.log('assigned value to liEl', liEl);
-        alki.appendChild(liEl);
+            var randCust = getRandomIntInclusive(this.min, this.max);  
+            var hourlyCooky = Math.floor(mult(randCust, this.avgCookies)[0]);
+            cookyTotal = cookyTotal + hourlyCooky;
+            console.log('total cookies', cookyTotal);
+            var liEl = document.createElement('li');
+            // console.log('just created liEl', liEl);
+            liEl.textContent = `${times[i]}: ${hourlyCooky} cookies`
+            // console.log('assigned value to liEl', liEl);
+            alki.appendChild(liEl);
         }
-        console.log('Overall total cookies', cookyTot);
+        var totalLi = document.createElement('li');
+        totalLi.textContent = `Total: ${cookyTotal} cookies`;
+        alki.appendChild(totalLi);
     }
 }
 // Alki function call
 shopFive.render();
+
