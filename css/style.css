@@ -1,0 +1,20 @@
+main {
+    width: 75%;
+    float: left;
+    margin-bottom: 10px;
+  }
+  
+  aside {
+    background-color: #bbbbbb;
+    width: 20%;
+    float: right;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  footer {
+    clear: both;
+    background-color: #20416c;
+    color: white;
+    padding: 5px 20px;
+  }
