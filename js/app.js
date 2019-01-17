@@ -72,11 +72,11 @@ Shop.prototype.render = function () {
   trEl.appendChild(tdEl);
   // Total cookies each hour
   for (var i = 0; i < hours.length; i++){
-    var tdEl = document.createElement('td');
+    tdEl = document.createElement('td');
     tdEl.textContent = this.cookiesEachHour[i];
     trEl.appendChild(tdEl);
   }
-  var tdEl = document.createElement('td');
+  tdEl = document.createElement('td');
   tdEl.textContent = this.totalDailyCookie;
   trEl.appendChild(tdEl);
   salmonTable.appendChild(trEl);
@@ -91,11 +91,11 @@ function headerRow() {
   trEl.appendChild(thEl);
   // create, content, append for
   for (var i = 0; i < hours.length; i++){
-    var thEl = document.createElement('th');
+    thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
   }
-  var thEl = document.createElement('th');
+  thEl = document.createElement('th');
   thEl.textContent = 'Daily Totals';
   trEl.appendChild(thEl);
   salmonTable.appendChild(trEl);
@@ -109,7 +109,7 @@ function footerRow() {
   trEl.appendChild(tdEl);
   // create, content, append for
   for (var i = 0; i < hours.length; i++){
-    var tdEl = document.createElement('td');
+    tdEl = document.createElement('td');
     tdEl.textContent = hourlyTotals[i];
     trEl.appendChild(tdEl);
   }
