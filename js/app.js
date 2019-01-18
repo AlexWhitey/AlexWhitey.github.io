@@ -1,20 +1,20 @@
 'use strict';
-
+// Global variables
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
-
 var allShops = [];
 var hourlyTotals = [];
 var dailyAllTotal = 0;
 var salmonTable = document.getElementById('salmonShops');
 var locationForm = document.getElementById('location-form');
 
-
 new Shop('Pike Marketplace', 23, 65, 6.3);
 new Shop('SeaTac Airport', 3, 24, 1.2);
 new Shop('Seattle Center', 11, 38, 3.1);
 new Shop('Capitol Hill', 20, 38, 2.3);
 new Shop('Alki', 2, 16, 4.6);
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Function Section
 
 //Random number generator
 function getRandomInt(min, max) {
@@ -29,6 +29,7 @@ function Shop(name, minCustomerEachHour, maxCustomerEachHour, avgCookiePerCustom
   this.customerEachHour = [];
   this.cookiesEachHour = [];
   this.totalDailyCookie = 0;
+
   allShops.unshift(this);
 }
 
@@ -47,6 +48,13 @@ Shop.prototype.hourlyCookies = function() {
   }
 };
 
+// this function gets the daily total for all shop cookie sales
+function allShopsDailyTotal(){
+  for (var i = 0; i < hourlyTotals.length; i++){
+    dailyAllTotal += hourlyTotals[i];
+  }
+}
+
 // this function gets the hourly total for all shop cookie sales
 function hourTotal(){
   for (var i = 0; i < hours.length; i++){
@@ -58,12 +66,6 @@ function hourTotal(){
   }
 }
 
-// this function gets the daily total for all shop cookie sales
-function allShopsDailyTotal(){
-  for (var i = 0; i < hourlyTotals.length; i++){
-    dailyAllTotal += hourlyTotals[i];
-  }
-}
 // this function renders the table body
 Shop.prototype.render = function () {
   var trEl = document.createElement('tr');
@@ -82,7 +84,7 @@ Shop.prototype.render = function () {
   salmonTable.appendChild(trEl);
 };
 
-// This function populates the table with the footer
+// This function populates the table with the header
 function headerRow() {
   salmonTable.textContent = '';
   var trEl = document.createElement('tr');
@@ -133,6 +135,9 @@ function handleShopSubmit(event) {
   var minCustomerEachHour = parseInt(event.target.minimumCustomer.value);
   var maxCustomerEachHour = parseInt(event.target.maximumCustomer.value);
   var avgCookiePerCustomer = parseInt(event.target.averageCookiePer.value);
+if ()
+
+
   //create variable to add new Shops/locations
   new Shop(name, minCustomerEachHour, maxCustomerEachHour, avgCookiePerCustomer);
   // Empty input fields
@@ -154,6 +159,7 @@ function handleShopSubmit(event) {
 // This is the Event listener for shop submission form
 locationForm.addEventListener('submit', handleShopSubmit);
 
+
 function customerLoader() {
   for (var i = 0; i < allShops.length; i++){
     allShops[i].hourlyCustomer();
@@ -173,4 +179,5 @@ function pageLoad(){
 }
 
 customerLoader();
+
 pageLoad();
