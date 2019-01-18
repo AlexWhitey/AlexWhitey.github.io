@@ -4,27 +4,31 @@
 <head>
   <meta charset="utf-8">
     <link rel='stylesheet' a href='css/reset.css'>
-    <link rel='stylesheet' a href='css/style.css'>
+    <link rel='stylesheet' a href='css/style-sales.css'>
   <title>Pat's Salmon cookies</title>
 </head>
 
 <body>
-
+<header>
+  <ul id="nav-bar">
+    
+  </ul>
+</header>
     <form id="location-form">
         <fieldset>
           <legend>Additional location form</legend>
     
           <label for="where">Where: </label>
-          <input name="where" type="text" size="15" />
+          <input name="where" type="text" size="15" required/>
     
           <label for="minimumCustomer">Minimum customers each day: </label>
-          <input name="minimumCustomer" type="number" size="50" />
+          <input name="minimumCustomer" type="number" size="50" required/>
 
           <label for="maximumCustomer">Maximum customers each day: </label>
-          <input name="maximumCustomer" type="number" size="50" />
+          <input name="maximumCustomer" type="number" size="50" required/>
 
           <label for="averageCookiePer">Average cookie per customer: </label>
-          <input name="averageCookiePer" type="number" size="50" />
+          <input name="averageCookiePer" type="number" size="50" required/>
     
           <button type="submit">Add location</button>
         </fieldset>
