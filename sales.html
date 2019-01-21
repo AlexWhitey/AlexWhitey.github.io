@@ -10,20 +10,20 @@
 
 <body>
   <header>
-        <section>
-          <a href="#" id="logo"><img src="img/salmon.png" alt="Logo" title="Logo" /></a>
-          <h3>The Salmon Villa</h3>
-        </section>
-        <nav class="clear">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-          </ul>
-        </nav>
+    <section>
+      <a href="#" id="logo"><img src="img/salmon.png" alt="Logo" title="Logo" /></a>
+      <h3>The Salmon Villa</h3>
+    </section>
+    <nav class="clear">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
   </header>
     <form id="location-form">
-        <fieldset>
-          <legend>Additional location form</legend>
-    
+      <fieldset>
+        <legend>Additional location form</legend>
+
           <label for="where">Where: </label>
           <input name="where" type="text" size="15" required/>
     
@@ -36,11 +36,11 @@
           <label for="averageCookiePer">Average cookie per customer: </label>
           <input name="averageCookiePer" type="number" size="50" required/>
     
-          <button type="submit">Add location</button>
-        </fieldset>
-      </form>
+        <button type="submit">Add location</button>
+      </fieldset>
+    </form>
       
-  <h1>Shop locations and cookies</h1>
+  <h2>Shop locations and cookies</h2>
   <table id = "salmonShops"></table>
 
   <a href="index.html"><button>Click me to go to Homepage!</button></a>
@@ -48,15 +48,14 @@
   <script src="js/app.js"></script>
 
   <footer class="footer-d">
+		<section class="left">
+			<img src="img/chinook.jpg" alt="Logo" title="Logo" id="bttm-logo" />
+			<h3>The Salmon Villa</h3>
+			<p class="company-name">The Salmon Villa &copy; 2019</p>
+		</section>
 
-			<section class="left">
-				<img src="img/chinook.jpg" alt="Logo" title="Logo" id="bttm-logo" />
-				<h3>The Salmon Villa</h3>
-				<p class="company-name">The Salmon Villa &copy; 2019</p>
-			</section>
-
-			<section class="center">
-				<div>
+		<section class="center">
+			<div>
 					<i class="fa fa-map-marker"></i>
 					<p><span>1234 Pike Place</span> Seattle, WA</p>
 				</div>
@@ -73,8 +72,15 @@
 			</section>
 
 			<section class="right">
-					<span class="hours">Our Hours:</span>
-
+          <span class="hours">Our Hours:</span>
+          <ul>
+              <li>
+                Monday - Friday: 8am - 6pm
+              </li>
+              <li>
+                Closed on weekends
+              </li>
+          </ul>
 			</section>
     </footer>
     
