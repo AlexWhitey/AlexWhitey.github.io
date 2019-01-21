@@ -135,9 +135,7 @@ function handleShopSubmit(event) {
   var minCustomerEachHour = parseInt(event.target.minimumCustomer.value);
   var maxCustomerEachHour = parseInt(event.target.maximumCustomer.value);
   var avgCookiePerCustomer = parseInt(event.target.averageCookiePer.value);
-if ()
-
-
+  
   //create variable to add new Shops/locations
   new Shop(name, minCustomerEachHour, maxCustomerEachHour, avgCookiePerCustomer);
   // Empty input fields
